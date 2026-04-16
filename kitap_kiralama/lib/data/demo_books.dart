@@ -1,0 +1,323 @@
+import 'package:flutter/material.dart';
+import 'package:kitap_kiralama/models/book.dart';
+
+const List<Book> demoBooks = <Book>[
+  Book(
+    id: '1984',
+    title: '1984',
+    author: 'George Orwell',
+    category: 'Distopya',
+    subtitle: 'Gercegin devlet eliyle yeniden yazildigi sarsici bir distopya.',
+    description:
+        'Tek bir otoritenin hayatın her alanini kontrol ettigi bir duzende Winston, dusunmenin bile suca donustugu bir sistemin icinde ayakta kalmaya calisir. Roman; hafiza, gercek ve ozgurluk kavramlarini sert ama akici bir anlatimla sorgular.',
+    whyRead:
+        'Gundelik hayatta fark etmeden teslim oldugumuz guc yapilarini sorgulattigi icin hala guncel hissettirir. Kisa surede etkisini gosteren ama uzun sure akilda kalan bir kitaptir.',
+    readerNote:
+        'Ozellikle ilk yuz sayfa dunyayi kurar; sabirla okundugunda final etkisi cok daha guclu hissedilir.',
+    readingTime: '8 saat',
+    edition: 'Klasik Seri',
+    rating: '4.8',
+    pages: 352,
+    price: 185,
+    language: 'Turkce',
+    publisher: 'Klasik Secki',
+    highlights: <String>['Zihin acici', 'Karamsar atmosfer', 'Klasik'],
+    startColor: Color(0xFF39516C),
+    endColor: Color(0xFF1C2738),
+    coverAsset: 'assets/covers/1984.jpg',
+  ),
+  Book(
+    id: 'great-gatsby',
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    category: 'Klasik',
+    subtitle: 'Ihtisamli partilerin ardindaki yalnizlik ve takinti hikayesi.',
+    description:
+        'Amerikan ruyasinin parlak goruntusunun ardinda kirilgan iliskiler, ertelemis duygular ve sinifsal gerilimler vardir. Gatsby nin gecmise saplanmis hayati, romanin her sayfasina ince bir huzun tasir.',
+    whyRead:
+        'Kisa bir hacimde karakter, atmosfer ve toplumsal elestiriyi bir arada sunar. Estetik dili sayesinde sunumluk bir uygulamada da iyi duran bir kitaptir.',
+    readerNote:
+        'Parti sahneleri kadar anlatim altindaki yalnizlik hissine dikkat edilirse roman cok daha derin okunur.',
+    readingTime: '6 saat',
+    edition: 'Ozel Baski',
+    rating: '4.7',
+    pages: 208,
+    price: 170,
+    language: 'Turkce',
+    publisher: 'Roman Cizgisi',
+    highlights: <String>['Kisa okuma', 'Guc ve sinif', 'Caz Cagi'],
+    startColor: Color(0xFF647B4E),
+    endColor: Color(0xFF2F4223),
+    coverAsset: 'assets/covers/great_gatsby.jpg',
+  ),
+  Book(
+    id: 'pride-and-prejudice',
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    category: 'Romantik',
+    subtitle:
+        'Onyargi, gurur ve ince mizah arasinda ilerleyen klasik ask hikayesi.',
+    description:
+        'Elizabeth Bennet ile Mr. Darcy arasindaki gerilimli tanisma, toplumsal beklentilerin ve kisilik catismalarinin etkisiyle katman katman acilir. Roman hem duygusal hem de ironik tonuyla bugun bile taze hissettirir.',
+    whyRead:
+        'Karakterler arasi diyaloglar ve ince mizah, romantik klasikleri sevmeyen okurlari bile kitabin icine cekebilir.',
+    readerNote:
+        'Sadece ask hikayesi gibi degil, donemin aile yapisini ve sinifsal baskilarini da anlatan bir roman olarak okunmali.',
+    readingTime: '7 saat',
+    edition: 'Modern Klasikler',
+    rating: '4.9',
+    pages: 279,
+    price: 168,
+    language: 'Turkce',
+    publisher: 'Klasik Kutuphane',
+    highlights: <String>['Mizahli', 'Guclu karakterler', 'Romantik'],
+    startColor: Color(0xFFB56C46),
+    endColor: Color(0xFF6E3720),
+    coverAsset: 'assets/covers/pride_and_prejudice.jpg',
+  ),
+  Book(
+    id: 'to-kill-a-mockingbird',
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    category: 'Roman',
+    subtitle:
+        'Adalet duygusunu bir cocugun bakis acisindan ele alan unutulmaz eser.',
+    description:
+        'Kucuk bir kasabada gecen hikaye, irkcilik ve adalet sorunlarini Scout un masum ama keskin gozlemleriyle anlatir. Kitap hem duygusal hem de ahlaki acidan guclu bir okuma deneyimi sunar.',
+    whyRead:
+        'Empati kurduran yapisi ve yalnizca dava degil insan hikayelerine odaklanmasi onu her donem icin onemli kilar.',
+    readerNote:
+        'Cocuk anlatimi nedeniyle hafif gorunse de alt metni son derece yogundur; karakterlerin sessiz degisimleri dikkatle takip edilmeli.',
+    readingTime: '8 saat',
+    edition: 'Cep Boy',
+    rating: '4.6',
+    pages: 336,
+    price: 192,
+    language: 'Turkce',
+    publisher: 'Edebiyat Serisi',
+    highlights: <String>['Adalet', 'Duygusal', 'Klasik roman'],
+    startColor: Color(0xFF634B63),
+    endColor: Color(0xFF241D2E),
+    coverAsset: 'assets/covers/to_kill_a_mockingbird.jpg',
+  ),
+  Book(
+    id: 'crime-and-punishment',
+    title: 'Crime and Punishment',
+    author: 'Fyodor Dostoevsky',
+    category: 'Psikolojik',
+    subtitle:
+        'Vicdan ve akil arasinda savrulan bir karakterin derin ic hesaplasmasi.',
+    description:
+        'Raskolnikov un bir cinayet sonrasinda yasadigi zihinsel dagilma, roman boyunca felsefi ve psikolojik bir gerilim yaratir. Kitap, yalnizca olay odakli degil, karakterin ic dunyasina inen guclu bir deneyimdir.',
+    whyRead:
+        'Derin karakter cozumlemeleri ve ahlaki sorular, klasiklerden daha yogun bir sey arayan okurlar icin cok doyurucudur.',
+    readerNote:
+        'Uzun olmasina ragmen bolum bolum ilerlemek ve karakterlerin ruh halini not etmek kitabi daha akici hale getirir.',
+    readingTime: '9 saat',
+    edition: 'Koleksiyon',
+    rating: '4.8',
+    pages: 576,
+    price: 210,
+    language: 'Turkce',
+    publisher: 'Derin Okuma',
+    highlights: <String>['Psikolojik', 'Uzun soluklu', 'Dusundurucu'],
+    startColor: Color(0xFF2C5A62),
+    endColor: Color(0xFF173136),
+    coverAsset: 'assets/covers/crime_and_punishment.jpg',
+  ),
+  Book(
+    id: 'the-little-prince',
+    title: 'The Little Prince',
+    author: 'Antoine de Saint-Exupery',
+    category: 'Masalsi',
+    subtitle:
+        'Cocuk masali gorunumunde buyuklere cok sey soyleyen zarif anlatı.',
+    description:
+        'Kucuk Prens in gezegenler arasi yolculugu; dostluk, bag kurma ve buyume kavramlarini yalın ama unutulmaz bir dille anlatir. Kisa oldugu halde etkisi uzun sure devam eden bir kitaptir.',
+    whyRead:
+        'Hem kolay okunur hem de altinda cok katmanli bir anlam tasir; farkli yaslarda farkli duygular uyandirir.',
+    readerNote:
+        'Kisacik bolumleri aceleyle gecmek yerine her bolumun arkasindaki metaforu dusunerek okunursa daha cok tat birakir.',
+    readingTime: '3 saat',
+    edition: 'Resimli Basim',
+    rating: '4.5',
+    pages: 96,
+    price: 140,
+    language: 'Turkce',
+    publisher: 'Ozel Basim',
+    highlights: <String>['Kisa okuma', 'Masalsi', 'Zarif'],
+    startColor: Color(0xFF8C4D52),
+    endColor: Color(0xFF4A2329),
+    coverAsset: 'assets/covers/the_little_prince.jpg',
+  ),
+  Book(
+    id: 'fahrenheit-451',
+    title: 'Fahrenheit 451',
+    author: 'Ray Bradbury',
+    category: 'Distopya',
+    subtitle: 'Kitaplarin yasaklandigi bir toplumda uyanis hikayesi.',
+    description:
+        'Itfaiyecilerin yangin sondurmek yerine kitap yaktigi bir duzende Montag, yasadigi hayatin boslugunu fark etmeye baslar. Roman, dusunmenin ve hafizayi korumanin neden hayati oldugunu cok net hissettirir.',
+    whyRead:
+        'Akici yapisi sayesinde distopyaya giris icin cok uygundur; teknoloji ve tuketim elestirisiyle de oldukca gunceldir.',
+    readerNote:
+        'Kisa bolum yapisi hizli okunur, ancak kitabin asıl etkisi semboller uzerinde duruldugunda ortaya cikar.',
+    readingTime: '5 saat',
+    edition: 'Modern Seri',
+    rating: '4.7',
+    pages: 232,
+    price: 176,
+    language: 'Turkce',
+    publisher: 'Mavi Raf',
+    highlights: <String>['Hizli tempo', 'Distopya', 'Teknoloji elestirisi'],
+    startColor: Color(0xFF0D7C86),
+    endColor: Color(0xFF0A4251),
+    coverAsset: 'assets/covers/fahrenheit_451.jpg',
+  ),
+  Book(
+    id: 'the-hobbit',
+    title: 'The Hobbit',
+    author: 'J.R.R. Tolkien',
+    category: 'Fantastik',
+    subtitle: 'Konfor alanindan cikmak zorunda kalan bir kahramanin yolculugu.',
+    description:
+        'Bilbo Baggins in beklenmedik macerasi, fantastik dunyanin icine hafif ve sicak bir giris sunar. Ejderha, hazine ve yol hikayesi olsa da romanin asil gucu karakterin degisimindedir.',
+    whyRead:
+        'Buyuk bir fantastik evrene giris yapmak isteyenler icin korkutmayan, eglenceli ve akici bir baslangictir.',
+    readerNote:
+        'Dunyayi cizme sevdiginiz varsa bu kitap harita ve yol hissiyle sizi cok kolay icine ceker.',
+    readingTime: '7 saat',
+    edition: 'Ozel Basim',
+    rating: '4.8',
+    pages: 320,
+    price: 205,
+    language: 'Turkce',
+    publisher: 'Fantastik Dizi',
+    highlights: <String>['Macera', 'Fantastik', 'Sicak ton'],
+    startColor: Color(0xFF4B8C7D),
+    endColor: Color(0xFF1A4D4B),
+    coverAsset: 'assets/covers/the_hobbit.jpg',
+  ),
+  Book(
+    id: 'dune',
+    title: 'Dune',
+    author: 'Frank Herbert',
+    category: 'Bilim Kurgu',
+    subtitle:
+        'Siyaset, cografya ve kader duygusunu birlestiren epik bilim kurgu.',
+    description:
+        'Arrakis gezegeninde guc dengeleri, doga kosullari ve kehanet duygusu ic ice gecer. Dune yalnizca bir macera degil, ayni zamanda iktidar ve toplumsal yapilar uzerine katmanli bir romandir.',
+    whyRead:
+        'Daha buyuk olcekli bir dunyaya dalmak isteyen okurlar icin oldukca doyurucudur; atmosfer kurma gucu cok yuksektir.',
+    readerNote:
+        'Baslangicta kavram yogun gelebilir; isimlere ve ailelere biraz alisildiktan sonra kitap cok daha rahat akar.',
+    readingTime: '10 saat',
+    edition: 'Koleksiyon',
+    rating: '4.9',
+    pages: 604,
+    price: 228,
+    language: 'Turkce',
+    publisher: 'Bilim Kurgu Rafı',
+    highlights: <String>['Epik', 'Dunya kurulum', 'Siyasi'],
+    startColor: Color(0xFF338A9F),
+    endColor: Color(0xFF183C58),
+    coverAsset: 'assets/covers/dune.jpg',
+  ),
+  Book(
+    id: 'jane-eyre',
+    title: 'Jane Eyre',
+    author: 'Charlotte Bronte',
+    category: 'Gotik',
+    subtitle:
+        'Bagimsiz bir kadinin duygusal ve ahlaki direncini anlatan roman.',
+    description:
+        'Jane in zorlu cocuklugundan yetiskinligine uzanan yolculugu, ask hikayesi ile bireysel onur arayisini bir arada ilerletir. Gotik atmosferi sayesinde roman duygusal oldugu kadar gizemlidir de.',
+    whyRead:
+        'Guclu bir kadın karakter merkezde oldugu icin romantik klasikler arasinda ayri bir yere sahiptir.',
+    readerNote:
+        'Duygusal anlar kadar Jane in kararlarina odaklanmak, kitabin karakter gucunu daha net gosterir.',
+    readingTime: '8 saat',
+    edition: 'Klasik Basim',
+    rating: '4.6',
+    pages: 402,
+    price: 188,
+    language: 'Turkce',
+    publisher: 'Klasik Kutuphane',
+    highlights: <String>['Gotik hava', 'Guclu kahraman', 'Duygusal'],
+    startColor: Color(0xFF5A859B),
+    endColor: Color(0xFF273B4F),
+    coverAsset: 'assets/covers/jane_eyre.jpg',
+  ),
+  Book(
+    id: 'the-alchemist',
+    title: 'The Alchemist',
+    author: 'Paulo Coelho',
+    category: 'Felsefi',
+    subtitle: 'Kendi yolunu arayan bir gencin sembolik yolculugu.',
+    description:
+        'Santiago nun hazinesini ararken aslinda kendini bulmaya yaklastigi bu anlatı, sade diliyle genis bir okur kitlesine hitap eder. Roman, hayal kurma ve yolculuga cikma cesaregi uzerine kuruludur.',
+    whyRead:
+        'Yormayan ama motive eden bir ton arayanlar icin uygun bir secenektir; kisa surede biten bir kitap olarak iyi bir ara okuma olur.',
+    readerNote:
+        'Kitabi dogrudan ogut kitabi gibi degil, sembollerle kurulmus kisa bir masal gibi okumak daha dogru sonuc verir.',
+    readingTime: '4 saat',
+    edition: 'Ciltli Basim',
+    rating: '4.4',
+    pages: 184,
+    price: 158,
+    language: 'Turkce',
+    publisher: 'Yol Hikayeleri',
+    highlights: <String>['Motivasyon', 'Kisa', 'Sembolik'],
+    startColor: Color(0xFF48A2A7),
+    endColor: Color(0xFF1E616A),
+    coverAsset: 'assets/covers/the_alchemist.jpg',
+  ),
+  Book(
+    id: 'sapiens',
+    title: 'Sapiens',
+    author: 'Yuval Noah Harari',
+    category: 'Inceleme',
+    subtitle: 'Insanlik tarihini genis bir cerceveden okutan populer inceleme.',
+    description:
+        'Harari, insan turunun avci-toplayicilik doneminden gunumuze kadar uzanan seruvenini kapsayici bir dille anlatir. Kitap; ekonomi, kultur, din ve teknoloji gibi farkli alanlari tek akista birlestirir.',
+    whyRead:
+        'Roman disinda ama akici bir sey arayanlar icin iyi bir secenektir; ders projesi icinde kategori cesitliligi de katar.',
+    readerNote:
+        'Her baslik tartismasiz kabul edilmese de kitap yeni sorular sordurdugu icin degerlidir.',
+    readingTime: '9 saat',
+    edition: 'Arastirma Dizisi',
+    rating: '4.7',
+    pages: 472,
+    price: 214,
+    language: 'Turkce',
+    publisher: 'Dusunce Kitapligi',
+    highlights: <String>['Bilgilendirici', 'Akici', 'Genis kapsam'],
+    startColor: Color(0xFF3A98A6),
+    endColor: Color(0xFF1C5A71),
+    coverAsset: 'assets/covers/sapiens.jpg',
+  ),
+  Book(
+    id: 'brave-new-world',
+    title: 'Brave New World',
+    author: 'Aldous Huxley',
+    category: 'Distopya',
+    subtitle: 'Konfor ile ozgurluk arasindaki gerilimi anlatan klasik.',
+    description:
+        'Bireyin duygularinin, iliskilerinin ve secimlerinin onceden tasarlandigi bir duzende huzur goruntusu altinda baska bir baski modeli kurulur. Roman, ozgurluk ile duzen arasindaki ince cizgiyi sert sekilde tartisir.',
+    whyRead:
+        '1984 kadar karanlik ama farkli bir yoldan ilerleyen distopya arayanlar icin cok guclu bir eslestirmedir.',
+    readerNote:
+        'Toplumun neden isledigini anlamak icin sadece ana karaktere degil arka plandaki kurguya da odaklanmak gerekir.',
+    readingTime: '6 saat',
+    edition: 'Klasik Seri',
+    rating: '4.6',
+    pages: 288,
+    price: 182,
+    language: 'Turkce',
+    publisher: 'Modern Klasikler',
+    highlights: <String>['Distopya', 'Toplum elestirisi', 'Klasik'],
+    startColor: Color(0xFF2D8A8F),
+    endColor: Color(0xFF1E4455),
+    coverAsset: 'assets/covers/brave_new_world.jpg',
+  ),
+];
