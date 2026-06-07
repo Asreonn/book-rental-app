@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Projenin Ozeti}{3}{section.1}%
+\contentsline {section}{\numberline {2}Projenin Amaci ve Kapsami}{3}{section.2}%
+\contentsline {section}{\numberline {3}Genel Uygulama Akisi}{4}{section.3}%
+\contentsline {section}{\numberline {4}Proje Dizin Yapisi}{5}{section.4}%
+\contentsline {section}{\numberline {5}Projeyi Nasil Ilerlettik}{6}{section.5}%
+\contentsline {section}{\numberline {6}Firebase Entegrasyonu ve Veri Katmani}{6}{section.6}%
+\contentsline {section}{\numberline {7}Kullanici Hesabi ve Oturum Yonetimi}{7}{section.7}%
+\contentsline {section}{\numberline {8}Yonetici (Admin) Paneli ve Siparis Yonetimi}{8}{section.8}%
+\contentsline {section}{\numberline {9}Kayitlarin Saklanmasi ve Verinin Korunmasi}{8}{section.9}%
+\contentsline {section}{\numberline {10}Kullanici Deneyimi Tarafi}{9}{section.10}%
+\contentsline {section}{\numberline {11}Arayuz Tarafi}{9}{section.11}%
+\contentsline {section}{\numberline {12}Kod Bolumleri}{9}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Dosya: pubspec.yaml}{10}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Dosya: lib/firebase\_options.dart}{10}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Dosya: lib/app/app\_config.dart}{10}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Dosya: lib/main.dart}{11}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Dosya: lib/screens/auth\_page.dart}{12}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Dosya: lib/data/books\_repository.dart}{16}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Dosya: lib/data/user\_repository.dart}{17}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Dosya: lib/data/admin\_repository.dart}{19}{subsection.12.8}%
+\contentsline {subsection}{\numberline {12.9}Dosya: lib/app/admin\_app.dart}{21}{subsection.12.9}%
+\contentsline {subsection}{\numberline {12.10}Dosya: lib/screens/admin\_order\_detail\_page.dart}{29}{subsection.12.10}%
+\contentsline {subsection}{\numberline {12.11}Dosya: lib/screens/admin\_add\_book\_page.dart}{35}{subsection.12.11}%
+\contentsline {subsection}{\numberline {12.12}Dosya: firestore.rules}{40}{subsection.12.12}%
+\contentsline {subsection}{\numberline {12.13}Dosya: lib/app/book\_store\_app.dart}{40}{subsection.12.13}%
+\contentsline {subsection}{\numberline {12.14}Dosya: lib/screens/cart\_tab.dart}{46}{subsection.12.14}%
+\contentsline {subsection}{\numberline {12.15}Dosya: lib/models/order\_record.dart}{46}{subsection.12.15}%
+\contentsline {section}{\numberline {13}Sonuc ve Genel Degerlendirme}{47}{section.13}%
+\contentsline {section}{\numberline {14}Ekran Goruntuleri}{48}{section.14}%
