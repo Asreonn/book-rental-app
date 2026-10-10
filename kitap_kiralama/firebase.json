@@ -1,0 +1,26 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "kitap-kiralama-app",
+          "appId": "1:750249231647:android:478263607a09d2aa855c2a",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "kitap-kiralama-app",
+          "configurations": {
+            "android": "1:750249231647:android:478263607a09d2aa855c2a",
+            "ios": "1:750249231647:ios:dbc3f9869dd96996855c2a",
+            "web": "1:750249231647:web:10a42247b6a6ef91855c2a"
+          }
+        }
+      }
+    }
+  }
+}

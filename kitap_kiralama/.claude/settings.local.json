@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gcloud services *)",
+      "Read(//home/asreonn/.config/**)",
+      "Read(//home/asreonn/.config/configstore/**)",
+      "Bash(xelatex -interaction=nonstopmode kitap_kiralama_raporu.tex)"
+    ]
+  }
+}
